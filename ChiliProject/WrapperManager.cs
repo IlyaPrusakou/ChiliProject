@@ -144,6 +144,10 @@ namespace ChiliProject
                             {
                                 wrapped.ParentPanel = item.CurrentPanel;
                                 wrapped.RotationType = GetRotationType(wrapped.CurrentPanel.AttachedToSide, item.RotationType);
+                                if (wrapped.RotationType == "90" || wrapped.RotationType == "270")
+                                {
+                                    wrapped.Swapdimension();
+                                }
                                 int attachedside = Convert.ToInt32(wrapped.CurrentPanel.AttachedToSide);
                                 //float newWidth = Convert.ToSingle(wrapped.CurrentPanel.PanelWidth.Replace(".", ","));
                                 float newWidth = wrapped.CurrentPanel.PanelWidth;

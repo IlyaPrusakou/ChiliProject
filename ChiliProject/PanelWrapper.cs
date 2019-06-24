@@ -61,9 +61,13 @@ namespace ChiliProject
                     IndexedPositions.Add(new PointF(Location.X, Location.Y + CurrentPanelHeight / 2));
                     IndexedPositions.Add(new PointF(Location.X + CurrentPanelWidth / 2, Location.Y + CurrentPanelHeight));
                     break;
-
-                
             }
+        }
+        public void Swapdimension()
+        {
+            float futureHeight = CurrentPanel.PanelWidth;
+            CurrentPanel.PanelWidth = CurrentPanel.PanelHeight;
+            CurrentPanel.PanelHeight = futureHeight;
         }
     }
 }

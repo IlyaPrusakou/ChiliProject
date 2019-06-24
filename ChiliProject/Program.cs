@@ -46,7 +46,7 @@ namespace ChiliProject
             Console.WriteLine("Input data path for extract");
             //string Data = Console.ReadLine(@"D:\ДЗ\chiliproject\docs\3.xml");  якобы ввожу
             //prs.Extract(Data);
-            prs.Extract(@"D:\ДЗ\chiliproject\docs\3.xml");
+            prs.Extract(@"D:\ДЗ\chiliproject\docs\BeerPack.xml");
             WrapperManager manager = new WrapperManager();
             List<PanelWrapper> list = manager.WrapPanels(prs.Panels, prs.Xroot, prs.Yroot);
             Render(@"D:\ДЗ\chiliproject\docs\result.jpg", list, prs);
